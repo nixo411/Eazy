@@ -1,48 +1,78 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Eazy Community</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eazy Community</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial,sans-serif;
-}
+        body {
+            background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
+            color: #f3f4f6;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-body{
-    background:linear-gradient(135deg,#0f172a,#1e1b4b,#312e81);
-    color:white;
-}
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            max-width: 800px;
+        }
 
-header{
-    text-align:center;
-    padding:100px 20px;
-}
+        header h1 {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #ffffff, #c7d2fe);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-header h1{
-    font-size:60px;
-    margin-bottom:15px;
-}
+        header p {
+            font-size: clamp(1.1rem, 2vw, 1.4rem);
+            color: #94a3b8;
+            line-height: 1.6;
+        }
 
-header p{
-    font-size:22px;
-    color:#d1d5db;
-}
+        .discord-btn {
+            display: inline-block;
+            margin-top: 35px;
+            padding: 16px 40px;
+            background: #5865F2;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+            box-shadow: 0 4px 14px rgba(88, 101, 242, 0.4);
+        }
 
-.discord-btn{
-    display:inline-block;
-    margin-top:30px;
-    padding:15px 35px;
-    background:#5865F2;
-    color:white;
-    text-decoration:none;
-    border-radius:50px;
-    font-size:20px;
-    transition:0.3s;
-}
+        .discord-btn:hover {
+            background: #4752c4;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
+        }
 
-.discord-btn
+        .discord-btn:active {
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Eazy Community</h1>
+        <p>Rejoins notre communauté pour partager, progresser et échanger ensemble.</p>
+        <a href="#" class="discord-btn">Rejoindre Discord</a>
+    </header>
+
+</body>
+</html>
