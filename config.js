@@ -8,11 +8,11 @@ const COMMUNITY_CONFIG = {
         name: "Eazy Community",
         tagline: "L'épicentre du gaming, du dev et de l'innovation.",
         description: "Une communauté active de passionnés. Rejoins-nous pour participer à des projets uniques, trouver de l'aide sur tes scripts, et échanger avec des membres survoltés.",
-        inviteUrl: "https://discord.gg/eazy"
+        inviteUrl: "https://discord.gg/pZswWbhcv"
     },
     stats: {
-        totalMembers: "1,420",
-        onlineNow: "342",
+        totalMembers: "35",
+        onlineNow: "16",
         projectsLaunched: "12"
     },
     features: [
