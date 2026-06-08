@@ -1,13 +1,40 @@
-// À COMPLÉTER : Modifie les valeurs pour personnaliser ton site
-const CONFIG = {
-    title: "Eazy Community",
-    description: "Remplace ce texte par la description de ta communauté. Partage, échange et progresse avec nous !",
-    discordLink: "https://discord.gg/TON-LIEN-ICI",
-    
-    // Liste des avantages (laisse vide [] si tu n'en veux pas)
+/**
+ * Eazy Community - Production Configuration Profile
+ * Global variables for dynamic rendering
+ */
+
+const COMMUNITY_CONFIG = {
+    meta: {
+        name: "Eazy Community",
+        tagline: "L'épicentre du gaming, du dev et de l'innovation.",
+        description: "Une communauté active de passionnés. Rejoins-nous pour participer à des projets uniques, trouver de l'aide sur tes scripts, et échanger avec des membres survoltés.",
+        inviteUrl: "https://discord.gg/eazy"
+    },
+    stats: {
+        totalMembers: "1,420",
+        onlineNow: "342",
+        projectsLaunched: "12"
+    },
     features: [
-        "Entraide et Partage",
-        "Événements réguliers",
-        "Staff à l'écoute"
+        {
+            title: "Entraide & Dev",
+            description: "Salons dédiés au code avec un système de support communautaire ultra réactif.",
+            icon: "💻"
+        },
+        {
+            title: "Événements & Tournois",
+            description: "Hackathons internes, soirées gaming thématiques et concours réguliers avec cashprize.",
+            icon: "🏆"
+        },
+        {
+            title: "Économie Globale",
+            description: "Gagne des jetons d'activité, achète des rôles uniques et personnalise ton profil de serveur.",
+            icon: "⚡"
+        }
+    ],
+    staff: [
+        { name: "?", role: "Lead Dev / Founder", status: "online", color: "#ff4757" },
+        { name: "?", role: "Administratrice", status: "idle", color: "#9b59b6" },
+        { name: "?", role: "Modérateur", status: "dnd", color: "#2ed573" }
     ]
 };
