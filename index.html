@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Eazy Community</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', system-ui, sans-serif; }
         body {
             background: linear-gradient(135deg, #0f172a, #1e1b4b, #312e81);
             color: #f3f4f6;
@@ -19,60 +13,61 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            padding: 20px;
         }
-
-        header {
-            text-align: center;
-            padding: 40px 20px;
-            max-width: 800px;
-        }
-
-        header h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
-            margin-bottom: 20px;
+        .container { text-align: center; max-width: 600px; width: 100%; }
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4rem);
+            margin-bottom: 15px;
             background: linear-gradient(to right, #ffffff, #c7d2fe);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-
-        header p {
-            font-size: clamp(1.1rem, 2vw, 1.4rem);
-            color: #94a3b8;
-            line-height: 1.6;
-        }
-
-        .discord-btn {
+        p { font-size: clamp(1.1rem, 2.5vw, 1.3rem); color: #94a3b8; line-height: 1.6; margin-bottom: 30px; }
+        .btn {
             display: inline-block;
-            margin-top: 35px;
             padding: 16px 40px;
             background: #5865F2;
-            color: #ffffff;
+            color: white;
             text-decoration: none;
-            border-radius: 30px;
+            border-radius: 50px;
             font-size: 1.2rem;
             font-weight: 600;
-            transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
-            box-shadow: 0 4px 14px rgba(88, 101, 242, 0.4);
+            transition: 0.2s ease;
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.4);
         }
-
-        .discord-btn:hover {
-            background: #4752c4;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6);
-        }
-
-        .discord-btn:active {
-            transform: translateY(0);
-        }
+        .btn:hover { background: #4752c4; transform: translateY(-2px); box-shadow: 0 6px 20px rgba(88, 101, 242, 0.6); }
+        .features { display: block; margin-top: 50px; text-align: left; background: rgba(255,255,255,0.05); padding: 20px; border-radius: 15px; border: 1px solid rgba(255,255,255,0.1); }
+        .feature-item { margin-bottom: 10px; font-size: 1rem; color: #cbd5e1; }
     </style>
 </head>
 <body>
-
-    <header>
-        <h1>Eazy Community</h1>
-        <p>Rejoins notre communauté pour partager, progresser et échanger ensemble.</p>
-        <a href="#" class="discord-btn">Rejoindre Discord</a>
-    </header>
-
+    <div class="container">
+        <h1 id="title">Eazy Community</h1>
+        <p id="description">Chargement...</p>
+        <a href="#" id="invite-link" class="btn">Rejoindre Discord</a>
+        <div class="features" id="features-box" style="display:none;"></div>
+    </div>
+    
+    <script src="config.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            if (typeof CONFIG !== 'undefined') {
+                if(CONFIG.title) document.getElementById('title').innerText = CONFIG.title;
+                if(CONFIG.description) document.getElementById('description').innerText = CONFIG.description;
+                if(CONFIG.discordLink) document.getElementById('invite-link').href = CONFIG.discordLink;
+                if(CONFIG.features && CONFIG.features.length > 0) {
+                    const box = document.getElementById('features-box');
+                    box.style.display = 'block';
+                    CONFIG.features.forEach(f => {
+                        const div = document.createElement('div');
+                        div.className = 'feature-item';
+                        div.innerText = "✨ " + f;
+                        box.appendChild(div);
+                    });
+                }
+            }
+        });
+    </script>
 </body>
 </html>
