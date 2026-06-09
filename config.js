@@ -35,8 +35,8 @@ const COMMUNITY_CONFIG = {
     staff: [
         { name: "Eazy", role: "Lead Dev / Founder", status: "online", color: "#ff4757" },
         { name: "Nixo, Maxence", role: "Administratrice", status: "idle", color: "#9b59b6" },
-        { name: "Gianni, Adem, Nixo , Maxence , achraf,", role: "Modérateur", status: "dnd", color: "#2ed573" }
+        { name: "Gianni, Adem, Nixo , Maxence , achraf,", role: "Modérateur", status: "dnd", color: "#2ed573" },
+    {   { name: "TiagoV", role: "animateur", status: "dnd", color: "#2ed573" }
     ]
-    { name: "TiagoV", role: "animateur", status: "dnd", color: "#2ed573" }
     ]
-};
+}; 
